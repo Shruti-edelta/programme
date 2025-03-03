@@ -1,0 +1,11 @@
+[
+    {
+        "label": "roman_numerals",
+        "kind": 5,
+        "importPath": "p2",
+        "description": "p2",
+        "peekOfCode": "roman_numerals = {\"L\":50,\"XL\":40,\"X\":10,\"V\":5,\"IV\":4,\"I\":1}\nn=input(\"enter roman number: \")\nn=n.upper()\nint=0\nfor i in range(len(n)):\n    try:\n        if n[i] in roman_numerals:\n            if len(n)>i+1 and roman_numerals[n[i]]<roman_numerals[n[i+1]]:\n                int-=roman_numerals[n[i]]\n            else:",
+        "detail": "p2",
+        "documentation": {}
+    }
+]
