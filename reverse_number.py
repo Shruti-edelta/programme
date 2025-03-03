@@ -11,5 +11,5 @@ else:
             rem=int(n)%10
             n1=n1*10+rem
             n=int(n)/10
-        print("reverse num = ",n1)
+        print("reverse number = ",n1)
     
