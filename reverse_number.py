@@ -19,15 +19,7 @@ while True:
     if n.isnumeric():
         break
     else:
-        print("str")
+        print("plese enter valid numeric value(positive integer only)")
         continue
-if int(n)<0:
-   print("please enter positive number")
-else:
-    # while int(n)!=0:
-    #     rem=int(n)%10
-    #     n1=n1*10+rem
-    #     n=int(n)/10
-    # print("reverse number = ",n1)
-    for i in range(len(n)-1,-1,-1):
-        print(n[i],end="")
+for i in range(len(n)-1,-1,-1):
+    print(n[i],end="")
