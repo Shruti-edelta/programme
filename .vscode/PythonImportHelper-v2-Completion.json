@@ -1,5 +1,75 @@
 [
     {
+        "label": "requests",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "requests",
+        "description": "requests",
+        "detail": "requests",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "ollama",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "ollama",
+        "description": "ollama",
+        "detail": "ollama",
+        "documentation": {}
+    },
+    {
+        "label": "chat",
+        "importPath": "ollama",
+        "description": "ollama",
+        "isExtraImport": true,
+        "detail": "ollama",
+        "documentation": {}
+    },
+    {
+        "label": "ChatResponse",
+        "importPath": "ollama",
+        "description": "ollama",
+        "isExtraImport": true,
+        "detail": "ollama",
+        "documentation": {}
+    },
+    {
+        "label": "url",
+        "kind": 5,
+        "importPath": "api",
+        "description": "api",
+        "peekOfCode": "url = \"https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=IBM&interval=5min&outputsize=full&apikey=demo\"\nresponse = requests.get(url)\nif response.status_code == 200:\n        data = response.json()\n        print(\"data==\",data)",
+        "detail": "api",
+        "documentation": {}
+    },
+    {
+        "label": "response",
+        "kind": 5,
+        "importPath": "api",
+        "description": "api",
+        "peekOfCode": "response = requests.get(url)\nif response.status_code == 200:\n        data = response.json()\n        print(\"data==\",data)",
+        "detail": "api",
+        "documentation": {}
+    },
+    {
+        "label": "model",
+        "kind": 5,
+        "importPath": "deepseek",
+        "description": "deepseek",
+        "peekOfCode": "model = \"deepseek-r1\"\n# response: ChatResponse = chat(\n#     model=model, messages=[\n#         {\n#             'role': 'user',\n#             'content': args.ask_input,\n#         }\n#     ],\n#     stream=True\n# )",
+        "detail": "deepseek",
+        "documentation": {}
+    },
+    {
         "label": "roman_numerals",
         "kind": 5,
         "importPath": "p2",
