@@ -3,7 +3,8 @@ source env/bin/activate
 pip install -r requirment.txt <-library name version
 deactivate
 
-
 ollama run deepseek-r1
 
 python -c <- Running Python Commands Inline
+
+ctr+shift+v // formatted text in .md file

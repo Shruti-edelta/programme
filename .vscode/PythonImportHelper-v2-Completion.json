@@ -1,5 +1,84 @@
 [
     {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "gTTS",
+        "importPath": "gtts",
+        "description": "gtts",
+        "isExtraImport": true,
+        "detail": "gtts",
+        "documentation": {}
+    },
+    {
+        "label": "speech_recognition",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "speech_recognition",
+        "description": "speech_recognition",
+        "detail": "speech_recognition",
+        "documentation": {}
+    },
+    {
+        "label": "sounddevice",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sounddevice",
+        "description": "sounddevice",
+        "detail": "sounddevice",
+        "documentation": {}
+    },
+    {
+        "label": "numpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "numpy",
+        "description": "numpy",
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "pyttsx3",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pyttsx3",
+        "description": "pyttsx3",
+        "detail": "pyttsx3",
+        "documentation": {}
+    },
+    {
+        "label": "subprocess",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "subprocess",
+        "description": "subprocess",
+        "detail": "subprocess",
+        "documentation": {}
+    },
+    {
+        "label": "re",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "re",
+        "description": "re",
+        "detail": "re",
+        "documentation": {}
+    },
+    {
+        "label": "text",
+        "importPath": "hindi",
+        "description": "hindi",
+        "isExtraImport": true,
+        "detail": "hindi",
+        "documentation": {}
+    },
+    {
         "label": "requests",
         "kind": 6,
         "isExtraImport": true,
@@ -40,6 +119,103 @@
         "description": "ollama",
         "isExtraImport": true,
         "detail": "ollama",
+        "documentation": {}
+    },
+    {
+        "label": "Console",
+        "importPath": "rich.console",
+        "description": "rich.console",
+        "isExtraImport": true,
+        "detail": "rich.console",
+        "documentation": {}
+    },
+    {
+        "label": "colored",
+        "importPath": "termcolor",
+        "description": "termcolor",
+        "isExtraImport": true,
+        "detail": "termcolor",
+        "documentation": {}
+    },
+    {
+        "label": "t",
+        "kind": 5,
+        "importPath": "speechtotext.hindi",
+        "description": "speechtotext.hindi",
+        "peekOfCode": "t = \"hello\"\n# Convert Hindi text to speech\ntts = gTTS(t, lang='hi')\n# Save the audio to a file\ntts.save(\"hindi_audio.mp3\")\n# Play the audio (macOS)\nos.system(\"afplay hindi_audio.mp3\")  # macOS",
+        "detail": "speechtotext.hindi",
+        "documentation": {}
+    },
+    {
+        "label": "tts",
+        "kind": 5,
+        "importPath": "speechtotext.hindi",
+        "description": "speechtotext.hindi",
+        "peekOfCode": "tts = gTTS(t, lang='hi')\n# Save the audio to a file\ntts.save(\"hindi_audio.mp3\")\n# Play the audio (macOS)\nos.system(\"afplay hindi_audio.mp3\")  # macOS",
+        "detail": "speechtotext.hindi",
+        "documentation": {}
+    },
+    {
+        "label": "detect_sound",
+        "kind": 2,
+        "importPath": "speechtotext.practice",
+        "description": "speechtotext.practice",
+        "peekOfCode": "def detect_sound():\n    recognizer = sr.Recognizer()\n    # Using the microphone as the audio source\n    with sr.Microphone() as source:\n        print(\"Listening for sound... Please speak.\")\n        # Adjusting for ambient noise (background noise)\n        recognizer.adjust_for_ambient_noise(source)\n        try:\n            # Listen for the first sound/input\n            audio = recognizer.listen(source, timeout=5)  # Timeout after 5 seconds",
+        "detail": "speechtotext.practice",
+        "documentation": {}
+    },
+    {
+        "label": "recognizer",
+        "kind": 5,
+        "importPath": "speechtotext.speech_text",
+        "description": "speechtotext.speech_text",
+        "peekOfCode": "recognizer = sr.Recognizer()\n# Use the microphone as the audio source\nwith sr.Microphone() as source:\n    print(\"Adjusting for ambient noise... Please wait.\")\n    recognizer.adjust_for_ambient_noise(source)     #voice handle with threshod value\n    print(\"Listening for your speech... Speak now!\")\n    try:\n        # Capture the speech from the microphone\n        audio = recognizer.listen(source)\n        print(\"Processing your speech...\")",
+        "detail": "speechtotext.speech_text",
+        "documentation": {}
+    },
+    {
+        "label": "engine",
+        "kind": 5,
+        "importPath": "speechtotext.tts",
+        "description": "speechtotext.tts",
+        "peekOfCode": "engine = pyttsx3.init()\n# Set properties (optional)\nengine.setProperty('rate', 150)  # Speed of speech\nengine.setProperty('volume', 1)  # Volume (0.0 to 1.0)\nmsg=input(\"enter message: \")\n# Say something\nengine.say(msg)\n# Wait until speech is finished\nengine.runAndWait()",
+        "detail": "speechtotext.tts",
+        "documentation": {}
+    },
+    {
+        "label": "speak",
+        "kind": 2,
+        "importPath": "speechtotext.voice_deepseek",
+        "description": "speechtotext.voice_deepseek",
+        "peekOfCode": "def speak(cleaned_output):\n    engine.say(cleaned_output)\n    engine.runAndWait()\ndef listen():\n    print(\"speech\")\n    recognizer = sr.Recognizer()\n    with sr.Microphone() as source:\n        recognizer.adjust_for_ambient_noise(source)  #voice handle with threshod value(noise)\n        print(\"Please say something:\")\n        audio = recognizer.listen(source)",
+        "detail": "speechtotext.voice_deepseek",
+        "documentation": {}
+    },
+    {
+        "label": "listen",
+        "kind": 2,
+        "importPath": "speechtotext.voice_deepseek",
+        "description": "speechtotext.voice_deepseek",
+        "peekOfCode": "def listen():\n    print(\"speech\")\n    recognizer = sr.Recognizer()\n    with sr.Microphone() as source:\n        recognizer.adjust_for_ambient_noise(source)  #voice handle with threshod value(noise)\n        print(\"Please say something:\")\n        audio = recognizer.listen(source)\n        try:\n            g_text = recognizer.recognize_google(audio)\n            print(\"=====\",g_text)",
+        "detail": "speechtotext.voice_deepseek",
+        "documentation": {}
+    },
+    {
+        "label": "auto_answer",
+        "kind": 2,
+        "importPath": "speechtotext.voice_deepseek",
+        "description": "speechtotext.voice_deepseek",
+        "peekOfCode": "def auto_answer(text):\n    r=subprocess.run(['ollama','run',model,text],capture_output=True,text=True)\n    cleaned_output = re.sub(r'<.*?>','',r.stdout)\n    cleaned_output=cleaned_output.replace('**', ' ')\n    return cleaned_output\nwhile True:\n    print(\"in\")\n    text=listen()\n    if text.upper()==\"BREAK\": \n        print(\"=====\")",
+        "detail": "speechtotext.voice_deepseek",
+        "documentation": {}
+    },
+    {
+        "label": "engine",
+        "kind": 5,
+        "importPath": "speechtotext.voice_deepseek",
+        "description": "speechtotext.voice_deepseek",
+        "peekOfCode": "engine = pyttsx3.init()\ndef speak(cleaned_output):\n    engine.say(cleaned_output)\n    engine.runAndWait()\ndef listen():\n    print(\"speech\")\n    recognizer = sr.Recognizer()\n    with sr.Microphone() as source:\n        recognizer.adjust_for_ambient_noise(source)  #voice handle with threshod value(noise)\n        print(\"Please say something:\")",
+        "detail": "speechtotext.voice_deepseek",
         "documentation": {}
     },
     {
